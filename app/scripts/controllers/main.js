@@ -8,8 +8,9 @@
  * Controller of the instagramApp
  */
 angular.module('instagramApp')
-  .controller('MainCtrl', function ($scope, $auth) {
+  .controller('MainCtrl', function ($scope, $auth, dataSourceInstatram) {
     $scope.authenticate = function(provider) {
       $auth.authenticate(provider);
     };
+  
   });

@@ -21,9 +21,9 @@ angular
   .config(function ($routeProvider, $authProvider) {
 
     $authProvider.instagram({
-      clientId: '158d76fc9666428bb5a5977cf29d3aa0',
+      clientId: 'Seu id do instagram',
       responseType:'token',
-      scope:'public_content+comments'
+      scope:'public_content+comments+follower_list+relationships'
     });
 
     $routeProvider

@@ -8,10 +8,18 @@
  * Controller of the instagramApp
  */
 angular.module('instagramApp')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('AboutCtrl', function ($scope, dataSourceInstatram, $q) {
+    $scope.user;
+    function init(){
+        dataSourceInstatram.getUser().then(function(res){
+          // dataSourceInstatram.flo()
+          console.log(res.data.data);
+          $scope.user = res.data.data;
+          // $scope.user = {
+          //   name :
+          // }
+        });
+    }
+    init();
+
   });
